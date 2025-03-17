@@ -5,12 +5,20 @@ function mincost(arr)
 let cost=0;
 	while (arr.length>1 && arr.length<10**3 && arr <10**4) 
 	{
-		let newrope=arr[0]+arr[1];
-		cost +=newrope;
-		arr.splice(0,2,newrope);
-		arr.sort((arr[i],arr[i+1]) =>arr[i]-arr[i+1];)
+		let first=arr.shift();
+		let second=arr.shift();
+		let sum=first+second;
+		cost +=sum;
+		let insert=false;
+		if(sum<arr[i])
+		{
+			arr.splice(i,0,sum);
+			insert=true;
+			break;
+		}
 	}
-  return cost;
+ if(!insert)
+ return cost;
 }
 
 module.exports=mincost;
