@@ -8,7 +8,7 @@ let cost=0;
 		let newrope=arr[0]+arr[1];
 		cost +=newrope;
 		arr.splice(0,2,newrope);
-		arr.sort((arr[0],arr[1]) =>arr[0]-arr[1];)
+		arr.sort((arr[i],arr[i+1]) =>arr[i]-arr[i+1];)
 	}
   return cost;
 }
