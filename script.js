@@ -2,7 +2,15 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
-  
+let cost=0;
+	while (arr.length>1) 
+	{
+		let newrope=arr[0]+arr[1];
+		cost +=newrope;
+		arr.slice(0,2,newrope);
+		arr.sort((a,b) => a-b)
+	}
+  return cost;
 }
 
 module.exports=mincost;
