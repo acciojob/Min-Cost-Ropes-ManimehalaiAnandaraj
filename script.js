@@ -3,7 +3,7 @@ function mincost(arr)
 //write your code here
 // return the min cost
 let cost=0;
-	while (arr.length>1) 
+	while (arr.length>1 && arr.length<10**3 && arr <10**4) 
 	{
 		let newrope=arr[0]+arr[1];
 		cost +=newrope;
