@@ -2,22 +2,20 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
+	arr.sort((a,b) => a-b);
 let cost=0;
-	while (arr.length>1 && arr.length<10**3 && arr <10**4) 
+	while (arr.length>1 ) 
 	{
-		let first=arr.shift();
-		let second=arr.shift();
-		let sum=first+second;
+		let sum=arr.shift()+arr.shift();
 		cost +=sum;
-		let insert=false;
-		if(sum<arr[i])
-		{
-			arr.splice(i,0,sum);
-			insert=true;
-			break;
+		let i=0;
+		while (i<arr.length && sum>arr[i]) {
+			i++;
 		}
-	}
- if(!insert)
+			arr.splice(i,0,sum);
+			
+		}
+
  return cost;
 }
 
